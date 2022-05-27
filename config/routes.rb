@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get '/home', to: 'home#index'
+  get '/param', to: 'home#param'
+  get '/book/:book_id', to: 'home#param'
+
 end

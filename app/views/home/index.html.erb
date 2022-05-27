@@ -1,6 +1,20 @@
 <h1>Hallo <%= @title %></h1>
+
+<% content_for :menu do %>
+    <p>Menu Buku</p>
+<% end %>
+
 <ul>
     <% @nama.each do |name| %>
         <li><%= name %></li>
     <% end %>
 </ul>
+
+<h1>Daftar Buku</h1>
+<ul>
+    <% @books.each do |book| %>
+        <li><%= book.title %></li>
+    <% end %>
+</ul>
+
+<%= render 'soldout', books: @books %>
