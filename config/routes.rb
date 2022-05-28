@@ -8,4 +8,13 @@ Rails.application.routes.draw do
   get '/param', to: 'home#param'
   get '/book/:book_id', to: 'home#param'
 
+  # use all routes in resources
+  resources :books
+
+  # use only destroy routes in resources
+  # resources :books, only: [:destroy]
+
+  # use only destroy routes in resources
+  # resources :books, except: [:destroy]
+
 end
